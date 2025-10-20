@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Задание</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Главный заголовок страницы</h1>
+        <h2>Второстепенный заголовок</h2>
+    </header>
+    
+    <main>
+        <div class="content-block">
+            <p>Это основной текст страницы с обычным оформлением.</p>
+            <p class="special-text">Этот текст имеет особое оформление через класс.</p>
+        </div>
+        
+        <div class="background-block">
+            <p>Этот блок имеет фоновое оформление.</p>
+            <div>
+                <p>Это дочерний элемент внутри блока с фоном.</p>
+            </div>
+        </div>
+        
+        <div id="unique-element">
+            <p>Этот элемент имеет уникальный стиль через идентификатор.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Подвал страницы</p>
+    </footer>
+</body>
+</html>
+
+STYLE.CSS
+/* 1. Измените цвет текста заголовков */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* 2. Настройте размер и семейство шрифта для основного текста */
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* 3. Добавьте фон для одного из блоков */
+.background-block {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* 4. Измените цвет текста или фон при помощи класса */
+.special-text {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* 5. Используйте идентификатор, чтобы задать уникальный стиль для конкретного элемента */
+#unique-element {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* 6. Примените стиль к дочернему элементу внутри другого тега */
+.background-block > div > p {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+.content-block {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #95a5a6;
+}
